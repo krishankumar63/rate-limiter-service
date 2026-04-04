@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rate-limiter-service
+
+# All rate limit values live here ? change without touching Java code
+rate-limit:
+  order:
+    global-capacity: 10000       # total orders per minute system-wide
+    per-user-capacity: 5         # orders per minute per user
+    refill-duration-seconds: 60
+  auth:
+    forgot-password-capacity: 3  # password resets per minute (shared)
+    login-capacity: 10           # login attempts per minute per user
+    refill-duration-seconds: 60
+  product:
+    capacity: 100                # product browse per minute per user
+    refill-duration-seconds: 60
+
+logging:
+  level:
+    com.example.codingdecoded.ratelimiter: DEBUG
