@@ -29,7 +29,8 @@ public class ProductController {
      */
     @GetMapping
     public ResponseEntity<ApiResponse<List<Product>>> getProducts(
-            @RequestHeader("X-User-Id") String userId,
+            @RequestHeader(value = "X-User-Id", required = false,
+                    defaultValue = "anonymous") String userId,
             @RequestParam(required = false) String category) {
 
         List<Product> products = (category != null && !category.isBlank())
@@ -48,7 +49,8 @@ public class ProductController {
      */
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<Product>> getProduct(
-            @RequestHeader("X-User-Id") String userId,
+            @RequestHeader(value = "X-User-Id", required = false,
+                    defaultValue = "anonymous") String userId,
             @PathVariable String id) {
 
         Product product = productService.getById(id);

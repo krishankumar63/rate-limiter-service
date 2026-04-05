@@ -25,7 +25,8 @@ public class AuthController {
      */
     @PostMapping("/login")
     public ResponseEntity<ApiResponse<Map<String, String>>> login(
-            @RequestHeader("X-User-Id") String userId,
+            @RequestHeader(value = "X-User-Id", required = false,
+                    defaultValue = "anonymous") String userId,
             @RequestParam String password) {
 
         // Simulate auth (replace with real auth logic later)

@@ -53,6 +53,7 @@ public class OrderController {
      * GET /api/orders/history
      * Header: X-User-Id: user123
      */
+    //availabe tokens in the response is just for demo purposes, in real world we might not want to expose this info
     @GetMapping("/history")
     public ResponseEntity<ApiResponse<List<Order>>> getOrderHistory(
             @RequestHeader("X-User-Id") String userId) {

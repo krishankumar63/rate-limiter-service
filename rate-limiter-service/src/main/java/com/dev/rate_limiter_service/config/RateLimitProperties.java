@@ -16,9 +16,9 @@ public class RateLimitProperties {
     private Product product = new Product();
 
     public static class Order {
-        private long globalCapacity = 10000;
-        private long perUserCapacity = 5;
-        private long refillDurationSeconds = 60;
+        private long globalCapacity = 10000; //10,000
+        private long perUserCapacity = 5; //5
+        private long refillDurationSeconds = 60; //60
 
         public long getGlobalCapacity() { return globalCapacity; }
         public void setGlobalCapacity(long v) { this.globalCapacity = v; }
