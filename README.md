@@ -12,7 +12,7 @@
 
 ## 📌 What This Project Is
 
-Most college projects show basic CRUD. This project demonstrates something interviewers actually care about — **how do you protect a backend system at scale?**
+This project demonstrates how do you protect a backend system at scale?**
 
 This is a complete **e-commerce backend API** (orders, products, auth) with rate limiting as its core infrastructure layer. The rate limiter is built the way it's done in real production systems — not inside controllers, but as a **servlet filter that intercepts every request** before any business logic runs.
 
@@ -231,7 +231,7 @@ X-Retry-After: 47          ← only present on 429 responses
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Sunchit/ratelimiter.git
+git clone https://github.com/krishankumar63/rate-limiter-service.git
 cd ratelimiter
 
 # 2. Build
@@ -381,13 +381,6 @@ In dual-check mode: if the global bucket passes but the user bucket fails, the c
 | MockMvc | — | HTTP layer testing without a running server |
 | k6 | Latest | Load and performance testing |
 | Maven | 3.8+ | Build tool |
-
----
-
-## 👤 Author
-
-**Sunchit**
-- GitHub: [@Sunchit](https://github.com/Sunchit)
 
 ---
 
