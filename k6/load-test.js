@@ -16,7 +16,7 @@ export let options = {
     normal_load: {
       executor: 'constant-vus',
       vus: 5,                  // 5 simultaneous users
-      duration: '30s',
+      duration: '24s',
       tags: { scenario: 'normal_load' }
     },
 
